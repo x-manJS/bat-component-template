@@ -1,4 +1,4 @@
-
+﻿
 var path = require('path')
 var webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
@@ -7,9 +7,11 @@ const envConf = require('../config/prod.env');
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, '../dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'build.js',
+    libraryTarget: 'umd', // 组件被引用才会显得是组件
+
   },
   module: {
     rules: [
