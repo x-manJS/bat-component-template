@@ -1,4 +1,5 @@
 import '@babel/polyfill'
+import "@/libs/rem"
 
 // 这里是调试入口
 
